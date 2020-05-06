@@ -1,6 +1,20 @@
 class RPS 
-  def initialize (rock, paper, scissors)
-    @rock = rock
-    @paper = paper
-    @scissors = scissors
-  end
+  
+  def wins?(player1, player2)
+    if (player1 == "rock") && (player2 == "scissors")
+      puts "Rock destroys scissors. Player 1 wins."
+      elsif(player1 == "rock") && (player2 == "paper")
+      puts "Paper destroys Rock.  Player 2 wins"
+      elsif(player1 == "scissors") && (player2 == "paper")
+      puts "P"
+      elsif(player1 == "scissors") && (player2 == "rock")
+      false
+      elsif(player1 == "paper") && (player2 == "rock")
+      true
+      elsif(player1 == "paper") && (player2 == "scissors")
+      false
+      else 
+      return nil
+    end
+  end      
+end
